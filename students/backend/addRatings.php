@@ -13,7 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         date_default_timezone_set('Asia/Manila'); // Set timezone to Manila
         // Check if the record already exists
         $datenow = date('Y-m-d H:i:s'); 
-        $check_stmt = $conn->prepare('SELECT ratings_id FROM ratings WHERE events_id = ? AND student_id = ?');
+        $check_stmt = $conn->prepare('SELECT ratings_id FROM ratings WHERE events_id = ? 
+        AND student_id = ?');
         $check_stmt->bind_param('ss', $event_id, $student_id);
         $check_stmt->execute();
         $check_stmt->store_result();

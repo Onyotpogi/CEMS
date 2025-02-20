@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // **If inserting a new student, register attendance**
             if (!$existingStudent) {
-                Events($conn, $student_id);
+                // Events($conn, $student_id);
             }
 
             // **Commit transaction**

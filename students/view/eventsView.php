@@ -229,6 +229,7 @@ function checkAttendance($conn, $studentId, $eventId) {
                     <?php
 
                     if($checkAttendance['timeout'] === ''){
+                        echo $checkAttendance['timeout'];
                     }else{
                         echo $checkAttendance['timein'];
                     }
@@ -259,6 +260,7 @@ function checkAttendance($conn, $studentId, $eventId) {
                                 </div>
                                 ';
                             } else {
+                                echo $checkAttendance['timeout'];
                                 echo '
                                 <div class="alert alert-success text-center" role="alert">
                                     <i class="fas fa-check-circle"></i> Time Out Successfully!
